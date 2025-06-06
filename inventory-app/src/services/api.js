@@ -137,6 +137,12 @@ export const getItemDetails = (itemId) => {
   return api.get(`/v1/items/${itemId}`);
 };
 
+export const getItemByBarcode = (barcode) => {
+  // This endpoint needs to be implemented by the backend team as per required_api.md
+  // GET /v1/items/byBarcode/:code
+  return api.get(`/v1/items/byBarcode/${barcode}`);
+};
+
 export const listItems = (params) => { // For catalog, etc.
     return api.get('/v1/items', { params }); // params: name, page, page_size, sort
 };
